@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% if task %}Edit{% else %}Add{% endif %} Task</title>
+</head>
+
+<body>
+    <h1>{% if task %}Edit{% else %}Add{% endif %} Task</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" id="title" value="{% if task %}{{ task.title }}{% endif %}"><br><br>
+
+        {% if task %}
+        <label>
+            <input type="checkbox" name="complete" {% if task.complete %}checked{% endif %}>
+            Completed
+        </label><br><br>
+        {% endif %}
+
+        <button type="submit">Save</button>
+    </form>
+
+    <a href="{% url 'tasks' %}">⬅ Back to list</a>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Detail</title>
+</head>
+
+<body>
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.description }}</p>
+    <p>Status: {% if task.complete %}✅ Done{% else %}❌ Not done{% endif %}</p>
+
+    <a href="{% url 'tasks' %}">⬅ Back to list</a>
+</body>
+
+</html>
