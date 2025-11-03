@@ -24,9 +24,3 @@ Each project focuses on learning and improving my skills in **Django**, **HTML**
 | 📚 **Learning Demos** | Small experiments and code samples for Django features. |
 
 ---
-
-### 🚀 How to Run Any Project
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/si-chebbi-bara/Django_work.git
-   cd Django_work
